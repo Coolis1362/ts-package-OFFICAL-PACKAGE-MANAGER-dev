@@ -47,8 +47,15 @@ def ts_package():
 
             if git_input == "init":
                 print("Rechecking Ig Git Is Installed...\n")
-                if check_for_git():
-                    os.system("git init")
+                try:
+                    if check_for_git():
+                        os.system("git init")
+                    else:
+                        print("git can't be found exiting")
+                        time.sleep(1)
+                        sys.exit(0)
+                except Exception as e:
+                    print(f"Error occurred: {e}")
 
 
 
