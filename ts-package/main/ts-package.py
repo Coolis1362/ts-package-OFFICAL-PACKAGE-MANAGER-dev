@@ -22,7 +22,7 @@ def check_for_git():
 
 
 def ts_package():
-    VERSION = "1.0.0"
+    VERSION = "1.0.1"
     print(f"ts-package PACKAGE MANAGER VERSION: {VERSION}")
 
     while True:
@@ -42,6 +42,13 @@ def ts_package():
                     os.system(f"git clone https://github.com/Coolis1362/{install_input}")
                 except Exception as e:
                     print(f"ts-package install Coolis1362/{install_input}: ERROR FOUND: ERROR CODE 792: {e}")
+        if user_input == "git":
+            git_input = input(">> ts-package git")
+
+            if git_input == "init":
+                print("Rechecking Ig Git Is Installed...\n")
+                if check_for_git():
+                    os.system("git init")
 
 
 
