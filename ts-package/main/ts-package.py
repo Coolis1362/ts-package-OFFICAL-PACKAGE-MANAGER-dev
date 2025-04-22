@@ -43,7 +43,7 @@ def ts_package():
                 except Exception as e:
                     print(f"ts-package install Coolis1362/{install_input}: ERROR FOUND: ERROR CODE 792: {e}")
         if user_input == "git":
-            git_input = input(">> ts-package git")
+            git_input = input(">> ts-package git ")
 
             if git_input == "init":
                 print("Rechecking Ig Git Is Installed...\n")
